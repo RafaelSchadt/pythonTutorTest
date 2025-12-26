@@ -1,4 +1,3 @@
-# main.py
 import pgzrun
 from pgzero.rect import Rect
 import settings

@@ -1,4 +1,3 @@
-# menu.py
 from pgzero.rect import Rect
 from settings import WIDTH, HEIGHT, COLOR_SKY, SOUND_ENABLED
 

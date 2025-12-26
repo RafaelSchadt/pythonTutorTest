@@ -1,11 +1,10 @@
-# entities.py
 import random
 from pgzero.actor import Actor
 from pgzero.rect import Rect
 from pgzero.builtins import sounds
-import settings # Importamos o módulo inteiro para ler as mudanças em tempo real
+import settings 
 from settings import GRAVITY, MAX_FALL_SPEED 
-# Nota: Removemos SOUND_ENABLED daqui de cima para usar settings.SOUND_ENABLED
+
 
 # Lógica do Personagem Principal
 class Hero:
@@ -48,7 +47,6 @@ class Hero:
         self.sprite.pos = (self.hitbox.centerx, self.hitbox.bottom + self.visual_offset_y)
 
     def play_step_sound(self):
-        # CORREÇÃO: Usamos settings.SOUND_ENABLED para checar o valor atualizado
         if settings.SOUND_ENABLED:
             try:
                 choice = random.choice(self.step_sounds)
@@ -142,6 +140,5 @@ class Flag:
         self.timer = 0
 
     def update(self):
-        # Loop de animação (sempre ativo)
         self.timer += 1
         self.flag_sprite.image = self.frames[(self.timer // 15) % 2]

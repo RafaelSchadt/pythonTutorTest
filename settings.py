@@ -1,5 +1,3 @@
-# settings.py
-
 WIDTH = 1024
 HEIGHT = 768
 TITLE = "Alien Platformer"
